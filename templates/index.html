@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>젠장 또 숭배해야만해</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <style>
+        body, footer, #main_box, #compliment_box, main{
+            font-family : 'NanumSquareLight';
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items : center;
+        }
+
+        html, body {
+            height : 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffefb0;
+        }
+        /* style="background-color: #666dff" */
+
+        #container{
+            background-color: #ffffff;
+            height : 100%;
+            width : 500px;
+            
+        }
+
+        h1{
+            font-family : 'NanumSquare';
+            font-size : 25px;
+            margin-top : 40px;
+        }
+
+        main{
+            height : 80%;
+        }
+
+        #main_box * {
+            font-size : 15px;
+        }
+
+        input, button{
+            font-family : 'NanumSquareLight';
+            height : 25px;
+            border-radius : 5px ;
+            box-shadow : none;
+            outline : none;
+            border : 1px solid rgb(253, 208, 23);
+        }
+
+        button{
+            border-radius : 5px ;
+            background-color: white
+        }
+
+        #compliment_box img {
+            display: block;
+            margin: 20px auto;  /* 이미지의 상하 여백과 가로 가운데 정렬 */
+        }
+
+        #ment_gen{
+            height : 30px;
+        }
+
+        #ment_add, #ment_del{
+            width : 200px;
+            height : 40px;
+        }
+
+        footer{
+            height : 20%;
+            color: #666;
+
+        }
+
+        #alock_link:link{
+            color : rgb(253, 208, 23);
+        }
+
+        #alock_link:hover{
+            color : #a2a2a2;
+        }
+
+        button:hover{
+            color : rgb(253, 208, 23);
+        }
+
+
+    </style> 
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+    <div id = "container">
+        <main>
+            <div id = "title">
+                <h1>그를 숭배할 수 밖에 없어...🙇</h1>
+            </div>
+            <div id = "main_box">
+                <section id = "compliment_box">
+                    <form action="/compliment" method="post">
+                        <!-- <label for="name">이름 입력 : </label>  라벨 없애고 박스 안에 placeholder로 표기 -->
+                        <input type="text" id="name" name="name" placeholder="이름을 입력하세요." size = 16 style="padding-left: 8px;" required>
+                        <button id="ment_gen" type="submit">멘트 생성</button>
+                        <br>
+                        <img src = "{{ url_for('static', path='images/praise.png') }}" width="200">
+                    </form>
+                </section>
+                <section id = "ment_management">
+                    <form action="/add_compliment" method="get">
+                        <button id = "ment_add" type="submit">멘트 추가</button>
+                    </form>
+                    <br>
+                    <form action="/del_compliment" method="get">
+                        <button id = "ment_del" type="submit">멘트 삭제</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer> 
+            <p><a id = "alock_link" href="https://www.notion.so/chaewonhuh/ALOCK-_v2-10b60dcdee5880e3a20ecd2b678be180?pvs=4">알록</a>에서 본인만의 테스트를 직접 제작해보세요!</p>
+            <div class = "logo">
+                <a href="https://www.notion.so/chaewonhuh/ALOCK-_v2-10b60dcdee5880e3a20ecd2b678be180?pvs=4"><img src="{{ url_for('static', path='images/wordmark.png') }}" alt="alock" width="200"></a>
+            </div>
+            <p>© 2024 P13. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

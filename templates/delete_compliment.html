@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Compliment</title>
+</head>
+<body>
+    <h1>Delete a Compliment</h1>
+    <form action="/del_compliment" method="post">
+        <label for="compliment">Choose Compliment to Delete:</label>
+        <select id="compliment" name="compliment">
+            {% for compliment in compliments %}
+                <option value="{{ compliment }}">{{ compliment }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/">
+        <button type="submit">Back to Main Page</button>
+    </a>
+</body>
+</html>
