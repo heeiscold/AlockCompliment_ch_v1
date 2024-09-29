@@ -85,8 +85,8 @@ class ComplimentModel:
 # ComplimentModel 인스턴스 생성 (전역적으로 사용)
 compliment_model = ComplimentModel()
 
-# 정적 파일을 "/static" 경로에서 서빙하도록 설정
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# # 정적 파일을 "/static" 경로에서 서빙하도록 설정
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # 메인 페이지 ("/" 경로) - 선택할 수 있는 옵션들을 제공
 @app.get("/", response_class=HTMLResponse)
