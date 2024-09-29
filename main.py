@@ -99,7 +99,7 @@ async def main(request: Request):
 async def give_compliment(request: Request, name: str = Form(...)):
     # ComplimentModel을 사용하여 이름에 맞는 칭찬을 생성
     compliment = compliment_model.print_compliment(name)
-    return templates.TemplateResponse("compliment.html", {"request": request, "compliment": compliment})
+    return templates.TemplateResponse("compliment.html", {"request": request, "compliment": compliment, "name": name})
 
 
 # 칭찬문구 추가 페이지 - GET 요청 (새 칭찬문구를 입력할 수 있는 페이지 출력)
