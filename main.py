@@ -5,7 +5,7 @@ import random
 from fastapi.staticfiles import StaticFiles
 
 
-# FastAPI 애플리케이션 생성
+# FastAPI 애플리케이션 생성 
 app = FastAPI()
 
 # 템플릿 디렉토리 설정 (HTML 파일을 저장할 곳)
