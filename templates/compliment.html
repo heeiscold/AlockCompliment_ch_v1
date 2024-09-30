@@ -87,6 +87,7 @@
             border-radius: 5px; /* 둥근 사각형 */
             display: inline-block; /* 내용에 맞게 크기 조정 */
             margin: 20px 0; /* 상하 여백 추가 */
+            line-height : 160%;
         }
 
         button:hover {
@@ -116,7 +117,7 @@
         <main>
             <h1>🙇<strong>{{ name }}</strong>...🙇</h1>
             <div id="main_box">
-                <p id="compliment_text">{{ compliment }}</p> <!-- ID 추가하여 접근 가능하게 설정 -->
+                <p id="compliment_text">{{ compliment | safe }}</p> <!-- ID 추가하여 접근 가능하게 설정, safe는 mainn.py에서 변환된 <br> 값 읽는데 사용 -->
                 <a href="/">
                     <button type="button">다시하기</button>
                 </a>

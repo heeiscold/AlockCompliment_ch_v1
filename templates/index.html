@@ -7,7 +7,7 @@
     <title>젠장 또 숭배해야만해</title>
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <style>
-        body, footer, #main_box, #compliment_box, main{
+        body, footer, #main_box, main{
             font-family : 'NanumSquareLight';
             display: flex;
             flex-direction: column;
@@ -25,9 +25,13 @@
 
         #container{
             background-color: #ffffff;
-            height : 100%;
-            width : 500px;
-            
+            height : 90%;
+            width : 100%;
+            max-width : 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+            padding: 20px; /* 내부 여백 추가 */
+            border-radius: 10px; /* 모서리 둥글게 설정 */
+            margin: 20px; /* 외부 여백 */
         }
 
         h1{
@@ -47,24 +51,26 @@
         input, button{
             font-family : 'NanumSquareLight';
             height : 25px;
+            /* line-height: 25px; */
             border-radius : 5px ;
             box-shadow : none;
             outline : none;
             border : 1px solid rgb(253, 208, 23);
+            vertical-align: middle;
+            box-sizing : border-box;
         }
 
         button{
-            border-radius : 5px ;
-            background-color: white
+            background-color: white;
+            color : black;
+            /* padding-top : 2px;
+            padding-bottom : 2px; */
+
         }
 
         #compliment_box img {
             display: block;
             margin: 20px auto;  /* 이미지의 상하 여백과 가로 가운데 정렬 */
-        }
-
-        #ment_gen{
-            height : 30px;
         }
 
         #ment_add, #ment_del{
